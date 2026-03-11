@@ -487,26 +487,26 @@ input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.2)}
     </div>
 
     <h1 class="hero-h1">
-      <span id="h1-line1">Every Month You Wait,</span><br>
-      <span id="h1-line2">Your Old Windows</span><br>
-      <em id="h1-line3" style="color:var(--amber-lt);font-style:italic;">Drain Money From Your Bank Account</em>
+      Every Month You Wait,<br>
+      Your Old Windows<br>
+      <em style="color:var(--amber-lt);font-style:italic;">Drain Money From Your Bank Account</em>
     </h1>
 
     <p class="hero-sub">
-      <span class="hero-sub-text">Most Arizona homes built before 2010 are hemorrhaging cool air through builder-grade aluminum windows — silently adding <strong>$300–$700 per year</strong> to your electric bill and shortening your AC's life by years.</span>
+      Most Arizona homes built before 2010 are hemorrhaging cool air through builder-grade aluminum windows — silently adding <strong>$300–$700 per year</strong> to your electric bill and shortening your AC's life by years.
     </p>
 
     <!-- Social proof before CTA — Nielsen: trust signals before ask increases clicks 35% -->
     <div class="hero-proof">
       <span class="proof-stars">★★★★★</span>
-      <span class="proof-text"><strong><span class="proof-text-inner">Trusted by Arizona homeowners</span></strong> &nbsp;·&nbsp; Same Alside windows as the national chains — for thousands less</span>
+      <span class="proof-text"><strong>Trusted by Arizona homeowners</strong> &nbsp;·&nbsp; Same Alside windows as the national chains — for thousands less</span>
     </div>
 
     <div class="hero-btns">
       <a class="btn-cta" href="#calculator">See My Estimated Savings →</a>
       <a class="btn-soft" href="#problems">Signs your builder-grade windows are costing you ↓</a>
     </div>
-    <p class="hero-disclaimer" style="font-size:11px;color:var(--text-lt);margin-top:14px;animation:fadeUp .6s ease .55s both;line-height:1.6;max-width:560px;margin-left:auto;margin-right:auto">
+    <p style="font-size:11px;color:var(--text-lt);margin-top:14px;animation:fadeUp .6s ease .55s both;line-height:1.6;max-width:560px;margin-left:auto;margin-right:auto">
       *Savings estimates are based on U.S. Department of Energy data for hot-arid climate zones and are not guaranteed. Actual savings vary by home, window count, usage patterns, and utility rates.
     </p>
 
@@ -743,8 +743,8 @@ input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.2)}
       <!-- FORM — commitment follows investment (Cialdini, Commitment & Consistency principle) -->
       <div id="form-wrap">
         <p class="form-label-txt">
-          <span class="form-headline">Want a <strong>precise quote for your specific home?</strong></span><br>
-          <span class="form-subtext">schedule a free home energy assessment and see how much you could save.</span>
+          Want a <strong>precise quote for your specific home?</strong><br>
+          schedule a free home energy assessment and see how much you could save.
         </p>
         <div class="frow">
           <input class="finput" type="text" id="f-name" placeholder="Your name" autocomplete="name">
@@ -907,9 +907,8 @@ input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.2)}
     <p class="final-sub">A 30-minute conversation with one of our product specialists could save you $500 this year, $5,000 over a decade, and thousands more in avoided AC repair. There's no pressure and no obligation — just real numbers for your real home.</p>
     <a class="btn-cta" href="#calculator" style="font-size:17px;padding:19px 46px">Calculate My Savings First →</a>
     <p class="final-cta-note">
-      Or call directly: <a href="tel:+1" class="phone-number" style="color:var(--sage-lt);font-weight:600">(Your Phone Number)</a><br>
-      <span class="final-cta-note-text">Our product specialists answer during business hours.</span>
-    </p>
+      Or call directly: <a href="tel:+1" style="color:var(--sage-lt);font-weight:600">(Your Phone Number)</a><br>
+      Our product specialists answer during business hours.
     </p>
     <p class="service-area">📍 Oro Valley · Tucson · Marana · Sahuarita · Green Valley · Phoenix Metro · Southern Arizona</p>
   </div>
@@ -981,17 +980,3 @@ const io = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (!e.isIntersecting) return;
     const d = parseFloat(e.target.dataset.d || 0) * 95
-    const d2 = parseFloat(e.target.dataset.d || 0) * 95;
-    setTimeout(() => e.target.classList.add('in'), d2);
-    io.unobserve(e.target);
-  });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.pain-card, .tcard, .step, .fade-up, .why-card').forEach(el => io.observe(el));
-</script>
-
-<!-- ══ NETLIFY CMS DATA INJECTOR ══ -->
-<script src="/cms-inject.js"></script>
-
-</body>
-</html>
