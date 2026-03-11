@@ -1,0 +1,14 @@
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1; mode=block"
+
+# Enable Netlify Identity for CMS login
+[[redirects]]
+  from = "/admin"
+  to = "/admin/index.html"
+  status = 200

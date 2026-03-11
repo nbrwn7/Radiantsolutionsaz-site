@@ -1,0 +1,180 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  # ── SITE SETTINGS ──
+  - name: "settings"
+    label: "⚙️ Site Settings"
+    files:
+      - name: "general"
+        label: "Business Info & Contact"
+        file: "_data/settings.yml"
+        fields:
+          - { label: "Business Name", name: "business_name", widget: "string", default: "Radiant Window Solutions" }
+          - { label: "Phone Number", name: "phone", widget: "string", default: "(520) 555-1234" }
+          - { label: "Email Address", name: "email", widget: "string", default: "service@radiantsolutionsaz.com" }
+          - { label: "Website URL", name: "website", widget: "string", default: "radiantsolutionsaz.com" }
+          - { label: "Service Area Text", name: "service_area", widget: "string", default: "📍 Oro Valley · Tucson · Marana · Sahuarita · Green Valley · Phoenix Metro · Southern Arizona" }
+          - { label: "Footer Address", name: "footer_address", widget: "string", default: "Oro Valley, AZ 85755" }
+          - { label: "ROC License Number", name: "roc_number", widget: "string", default: "[Your ROC Number]" }
+
+  # ── HERO SECTION ──
+  - name: "hero"
+    label: "🏠 Hero Section"
+    files:
+      - name: "hero"
+        label: "Hero — Top of Page"
+        file: "_data/hero.yml"
+        fields:
+          - { label: "Urgency Band Text", name: "urgency_text", widget: "string", default: "Your windows are likely costing you hundreds to thousands of dollars per year" }
+          - { label: "Headline Line 1", name: "h1_line1", widget: "string", default: "Every Month You Wait," }
+          - { label: "Headline Line 2", name: "h1_line2", widget: "string", default: "Your Old Windows" }
+          - { label: "Headline Line 3 (Gold Italic)", name: "h1_line3", widget: "string", default: "Drain Money From Your Bank Account" }
+          - { label: "Subheadline Paragraph", name: "subheadline", widget: "text", default: "Most Arizona homes built before 2010 are hemorrhaging cool air through builder-grade aluminum windows — silently adding $300–$700 per year to your electric bill and shortening your AC's life by years." }
+          - { label: "Social Proof Text", name: "proof_text", widget: "string", default: "Trusted by Arizona homeowners · Same Alside windows as the national chains — for thousands less" }
+          - { label: "Primary Button Text", name: "btn_primary", widget: "string", default: "See My Estimated Savings →" }
+          - { label: "Secondary Button Text", name: "btn_secondary", widget: "string", default: "Signs your builder-grade windows are costing you ↓" }
+          - { label: "DOE Disclaimer", name: "disclaimer", widget: "text", default: "*Savings estimates are based on U.S. Department of Energy data for hot-arid climate zones and are not guaranteed. Actual savings vary by home, window count, usage patterns, and utility rates." }
+          - label: "Stats Bar"
+            name: "stats"
+            widget: "list"
+            fields:
+              - { label: "Number", name: "num", widget: "string" }
+              - { label: "Label", name: "lbl", widget: "string" }
+
+  # ── TRUST STRIP ──
+  - name: "trust"
+    label: "✅ Trust Strip"
+    files:
+      - name: "trust"
+        label: "Trust Strip — Below Hero"
+        file: "_data/trust.yml"
+        fields:
+          - label: "Trust Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Text", name: "text", widget: "string" }
+
+  # ── PAIN CARDS ──
+  - name: "pain"
+    label: "⚡ Problem Cards"
+    files:
+      - name: "pain"
+        label: "The 7 Problem Cards"
+        file: "_data/pain.yml"
+        fields:
+          - { label: "Section Label", name: "label", widget: "string", default: "The Problems Living in Your Walls Right Now" }
+          - { label: "Section Title", name: "title", widget: "string", default: "7 Ways Old Windows Work Against You" }
+          - { label: "Section Subtext", name: "subtext", widget: "text", default: "Builder-grade windows were chosen for the builder's budget — not your long-term comfort or electricity savings. Here's exactly how poor quality windows affect your family, your health and your bank account." }
+          - label: "Cards"
+            name: "cards"
+            widget: "list"
+            fields:
+              - { label: "Cost Badge", name: "cost", widget: "string" }
+              - { label: "Icon (emoji)", name: "icon", widget: "string" }
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body Text", name: "body", widget: "text" }
+              - { label: "Source/Stat", name: "stat", widget: "text" }
+
+  # ── CALCULATOR ──
+  - name: "calculator"
+    label: "🧮 Calculator Section"
+    files:
+      - name: "calculator"
+        label: "Savings Calculator"
+        file: "_data/calculator.yml"
+        fields:
+          - { label: "Section Label", name: "label", widget: "string", default: "Your Personalized Estimate" }
+          - { label: "Section Title", name: "title", widget: "string", default: "What Are Your Old Windows Costing You Right Now?" }
+          - { label: "Section Subtext", name: "subtext", widget: "text", default: "Move the slider to match your average electric bill. Your estimated savings appear instantly — backed by DOE energy data for Arizona." }
+          - { label: "Slider Label", name: "slider_label", widget: "string", default: "⚡  Your Average Monthly Electric Bill" }
+          - { label: "HVAC Bonus Text", name: "hvac_text", widget: "text", default: "🔧 Plus an estimated amount in avoided early HVAC replacement costs" }
+          - { label: "Disclaimer Text", name: "disclaimer", widget: "text", default: "*Estimates derived from U.S. DOE Building Energy Data Book and Lawrence Berkeley National Laboratory window efficiency studies for hot-arid climate zones (Arizona). Actual savings depend on window selection, orientation, shading, and usage patterns." }
+
+  # ── LEAD FORM ──
+  - name: "form"
+    label: "📋 Lead Form"
+    files:
+      - name: "form"
+        label: "Calculator Form & CTA"
+        file: "_data/form.yml"
+        fields:
+          - { label: "Form Headline", name: "headline", widget: "string", default: "Want a precise quote for your specific home?" }
+          - { label: "Form Subtext", name: "subtext", widget: "string", default: "schedule a free home energy assessment and see how much you could save." }
+          - { label: "Submit Button Text", name: "button", widget: "string", default: "Book My Free In-Home Energy Assessment →" }
+          - { label: "Trust Line (below button)", name: "trust_line", widget: "string", default: "🔒 Your information is never shared or sold · One of our product specialists will reach out as soon as we are available." }
+          - { label: "Success Title", name: "success_title", widget: "string", default: "You're all set, neighbor." }
+          - { label: "Success Body", name: "success_body", widget: "text", default: "One of our product specialists will reach out as soon as we are available to schedule your free in-home energy assessment. You'll leave knowing exactly what your windows are costing — and exactly what the fix looks like. No pressure. Your timeline." }
+          - { label: "GoHighLevel Webhook URL", name: "ghl_webhook", widget: "string", default: "" }
+
+  # ── WHY US ──
+  - name: "why"
+    label: "🏆 Why Us Cards"
+    files:
+      - name: "why"
+        label: "Why Radiant — 6 Cards"
+        file: "_data/why.yml"
+        fields:
+          - { label: "Section Title", name: "title", widget: "string", default: "Same Alside Windows. A Very Different Experience." }
+          - { label: "Section Subtext", name: "subtext", widget: "string", default: "The big national window companies use Alside too. Here's where we part ways." }
+          - label: "Cards"
+            name: "cards"
+            widget: "list"
+            fields:
+              - { label: "Icon (emoji)", name: "icon", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+
+  # ── PROCESS STEPS ──
+  - name: "process"
+    label: "📋 How It Works Steps"
+    files:
+      - name: "process"
+        label: "4-Step Process"
+        file: "_data/process.yml"
+        fields:
+          - { label: "Section Title", name: "title", widget: "string", default: "Four Steps. One Decision." }
+          - { label: "Section Subtext", name: "subtext", widget: "string", default: "No runaround. No second visits to present the proposal. Everything happens in one clear, honest sequence." }
+          - label: "Steps"
+            name: "steps"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+
+  # ── TESTIMONIALS ──
+  - name: "testimonials"
+    label: "⭐ Testimonials"
+    files:
+      - name: "testimonials"
+        label: "Customer Reviews"
+        file: "_data/testimonials.yml"
+        fields:
+          - label: "Reviews"
+            name: "reviews"
+            widget: "list"
+            fields:
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Customer Name", name: "name", widget: "string" }
+              - { label: "City", name: "city", widget: "string" }
+              - { label: "Savings Badge", name: "savings", widget: "string" }
+
+  # ── FINAL CTA ──
+  - name: "cta"
+    label: "🎯 Final CTA Section"
+    files:
+      - name: "cta"
+        label: "Bottom Call-to-Action"
+        file: "_data/cta.yml"
+        fields:
+          - { label: "Scarcity Band Text", name: "scarcity", widget: "string", default: "Spring assessment slots filling fast — book yours now" }
+          - { label: "Headline", name: "title", widget: "string", default: "Every Day You Wait Is Money Left Behind" }
+          - { label: "Subtext", name: "subtext", widget: "text", default: "A 30-minute conversation with one of our product specialists could save you $500 this year, $5,000 over a decade, and thousands more in avoided AC repair. There's no pressure and no obligation — just real numbers for your real home." }
+          - { label: "Button Text", name: "button", widget: "string", default: "Calculate My Savings First →" }
+          - { label: "Phone Note", name: "phone_note", widget: "string", default: "Our product specialists answer during business hours." }
