@@ -1,0 +1,17 @@
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+
+# ── FORM NOTIFICATIONS ──
+# Netlify will email submissions to nick@radiantsolutionsaz.com
+# Set this up in Netlify dashboard: Forms → consultation → Notifications → Add email
+# Email: nick@radiantsolutionsaz.com
+
+[[redirects]]
+  from = "/thank-you"
+  to = "/index.html"
+  status = 200
