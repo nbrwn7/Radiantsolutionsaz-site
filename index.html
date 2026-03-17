@@ -183,12 +183,12 @@ body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);-we
 .pain-section{background:var(--linen);padding:88px 28px}
 .pain-header{text-align:center;margin-bottom:56px}
 .pain-header .display{font-size:clamp(28px,4vw,44px);color:var(--forest-dk);margin-bottom:14px}
-.pain-header p{font-size:17px;color:var(--text-mid);max-width:560px;margin:0 auto;line-height:1.7;font-weight:300}
+.pain-header p{font-size:18px;color:#3A4232;max-width:600px;margin:0 auto;line-height:1.7;font-weight:400}
 
 .pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;max-width:1080px;margin:0 auto}
 
 .pain-card{
-  background:var(--white);border-radius:14px;padding:30px;
+  background:var(--white);border-radius:14px;padding:32px;
   border-left:4px solid transparent;
   box-shadow:0 2px 16px rgba(42,54,33,.07);
   opacity:0;transform:translateY(26px);
@@ -199,18 +199,18 @@ body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);-we
 
 .pain-cost{
   display:inline-block;
-  font-family:'Cormorant Garamond',serif;
-  font-size:13px;font-weight:600;
-  padding:4px 12px;border-radius:20px;
-  margin-bottom:14px;letter-spacing:.04em;
+  font-family:'Jost',sans-serif;
+  font-size:13px;font-weight:700;
+  padding:5px 13px;border-radius:20px;
+  margin-bottom:16px;letter-spacing:.03em;
 }
 .pain-icon{font-size:32px;margin-bottom:12px;display:block}
-.pain-eyebrow{font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px;display:block}
-.pain-title{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:700;color:var(--forest-dk);margin-bottom:11px;line-height:1.2}
-.pain-body{font-size:14px;color:var(--text-mid);line-height:1.72;margin-bottom:16px;font-weight:300}
+.pain-eyebrow{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px;display:block}
+.pain-title{font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:700;color:#1C2418;margin-bottom:12px;line-height:1.2}
+.pain-body{font-size:15px;color:#3A4232;line-height:1.75;margin-bottom:18px;font-weight:400}
 .pain-stat-bar{
-  border-radius:8px;padding:11px 14px;
-  font-size:12px;font-weight:500;line-height:1.45;
+  border-radius:8px;padding:12px 15px;
+  font-size:12.5px;font-weight:600;line-height:1.5;
 }
 
 /* ── BEFORE/AFTER VISUAL ── */
@@ -360,6 +360,31 @@ input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.2)}
 .why-title{font-weight:700;font-size:16px;color:var(--forest-dk);margin-bottom:8px}
 .why-body{font-size:13px;color:var(--text-mid);line-height:1.68;font-weight:300}
 
+/* ── SVG ICONS ── */
+.pain-svg-wrap{
+  width:72px;height:72px;border-radius:16px;
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:16px;
+}
+.pain-svg-wrap svg{width:38px;height:38px}
+.why-svg-wrap{
+  width:64px;height:64px;border-radius:50%;
+  background:linear-gradient(135deg,rgba(58,74,47,.08),rgba(125,155,106,.12));
+  border:1.5px solid rgba(92,115,71,.2);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 16px;
+  position:relative;
+}
+.why-svg-wrap svg{width:30px;height:30px}
+.why-check{
+  position:absolute;bottom:-4px;right:-4px;
+  width:20px;height:20px;border-radius:50%;
+  background:linear-gradient(135deg,var(--forest-lt),var(--sage));
+  border:2px solid var(--white);
+  display:flex;align-items:center;justify-content:center;
+}
+.why-check svg{width:10px;height:10px}
+
 /* ── PROCESS ── */
 .process-section{background:var(--forest);padding:88px 28px}
 .process-section .display{color:var(--white)}
@@ -493,13 +518,13 @@ input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.2)}
     </h1>
 
     <p class="hero-sub">
-      Most Arizona homes built before 2010 are hemorrhaging cool air through builder-grade aluminum windows — silently adding <strong>$300–$700 per year</strong> to your electric bill and shortening your AC's life by years.
+      Most Arizona homes built before 2010 are hemorrhaging cool air through builder-grade windows — silently adding <strong>hundreds to thousands of dollars per year</strong> to your electric bill and shortening your AC's lifespan.
     </p>
 
     <!-- Social proof before CTA — Nielsen: trust signals before ask increases clicks 35% -->
     <div class="hero-proof">
       <span class="proof-stars">★★★★★</span>
-      <span class="proof-text"><strong>Trusted by Arizona homeowners</strong> &nbsp;·&nbsp; Same Alside windows as the national chains — for thousands less</span>
+      <span class="proof-text"><strong>Trusted by Arizona homeowners</strong> &nbsp;·&nbsp; Same American made windows as the national chains — for thousands less</span>
     </div>
 
     <div class="hero-btns">
@@ -565,86 +590,151 @@ input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.2)}
   <div class="wrap">
     <div class="pain-header fade-up">
       <span class="lbl">The Problems Living in Your Walls Right Now</span>
-      <h2 class="display">7 Ways Old Windows<br>Work Against You</h2>
-      <p>Builder-grade windows were chosen for the builder's budget — not your long-term comfort or electricity savings. Here's exactly how poor quality windows affect your family, your health and your bank account.</p>
+      <h2 class="display">7 Ways Old Windows<br>Are Costing You</h2>
+      <p>Builder-grade windows were chosen for the builder's budget — not your long-term comfort or electricity savings.</p>
     </div>
 
     <div class="pain-grid">
 
       <div class="pain-card" data-d="0" style="--accent:#C8832A">
-        <span class="pain-cost" style="background:rgba(200,131,42,.1);color:#C8832A">$300–$700/year wasted</span>
-        <span class="pain-icon">⚡</span>
+        <span class="pain-cost" style="background:rgba(200,131,42,.1);color:#C8832A">Hundreds to thousands wasted yearly</span>
+        <div class="pain-svg-wrap" style="background:rgba(200,131,42,.1)">
+          <svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 4L7 22h12l-2 12 14-18H19l2-12z" fill="#C8832A" opacity=".2"/>
+            <path d="M21 4L7 22h12l-2 12 14-18H19l2-12z" stroke="#C8832A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+            <circle cx="30" cy="8" r="3" fill="#E0A050" opacity=".5"/>
+            <circle cx="33" cy="14" r="1.5" fill="#E0A050" opacity=".3"/>
+          </svg>
+        </div>
         <span class="pain-eyebrow" style="color:#C8832A">The Silent Money Drain</span>
         <h3 class="pain-title">Skyrocketing Electric Bills</h3>
-        <p class="pain-body">Builder-grade aluminum frames are thermally conductive — they pull desert heat directly into your living space every hour the sun shines. Your AC compensates by running nearly nonstop. You're not paying for cooling — you're paying for heat entering through your windows.</p>
+        <p class="pain-body">Aluminum frames conduct heat straight into your home. Your AC runs nonstop to keep up — and you pay for it every month.</p>
         <div class="pain-stat-bar" style="background:rgba(200,131,42,.07);border:1px solid rgba(200,131,42,.18)">
           <span style="color:#C8832A">📊 Source: U.S. Department of Energy — 25–30% of residential heating &amp; cooling energy is lost through windows and doors.</span>
         </div>
       </div>
 
       <div class="pain-card" data-d="1">
-        <span class="pain-cost" style="background:rgba(59,130,246,.1);color:#60A5FA">$5K–$12K early replacement</span>
-        <span class="pain-icon">❄️</span>
-        <span class="pain-eyebrow" style="color:#60A5FA">Your HVAC Is Aging Faster</span>
+        <span class="pain-cost" style="background:rgba(37,99,235,.1);color:#1D4ED8">$5K–$12K early replacement</span>
+        <div class="pain-svg-wrap" style="background:rgba(37,99,235,.08)">
+          <svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="8" width="30" height="16" rx="3" fill="#1D4ED8" opacity=".15" stroke="#1D4ED8" stroke-width="2"/>
+            <line x1="4" y1="15" x2="34" y2="15" stroke="#1D4ED8" stroke-width="1.5" opacity=".5"/>
+            <circle cx="10" cy="19" r="2" fill="#1D4ED8" opacity=".6"/>
+            <circle cx="17" cy="19" r="2" fill="#1D4ED8" opacity=".6"/>
+            <circle cx="24" cy="19" r="2" fill="#1D4ED8" opacity=".6"/>
+            <path d="M13 24v6M19 24v6M25 24v6" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round"/>
+            <path d="M9 30h20" stroke="#1D4ED8" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M30 11l3-3M30 13h3" stroke="#1D4ED8" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="pain-eyebrow" style="color:#1D4ED8">Your HVAC Is Aging Faster</span>
         <h3 class="pain-title">AC Dying Years Before It Should</h3>
-        <p class="pain-body">HVAC systems are rated for 15–20 years under normal load. Homes with thermally inefficient windows force units to run 30–50% more hours annually. That's years of wear in months. The compressor fails. The refrigerant leaks. You're replacing a $10,000 system years early — because of your windows.</p>
-        <div class="pain-stat-bar" style="background:rgba(59,130,246,.07);border:1px solid rgba(59,130,246,.18)">
-          <span style="color:#60A5FA">📊 Source: ENERGY STAR — Homes with certified windows can reduce HVAC runtime by up to 15%, directly extending equipment lifespan.</span>
+        <p class="pain-body">Bad windows force your AC to work 30–50% harder than it should. That's a $10,000 replacement bill arriving years too early.</p>
+        <div class="pain-stat-bar" style="background:rgba(37,99,235,.07);border:1px solid rgba(37,99,235,.2)">
+          <span style="color:#1D4ED8">📊 Source: ENERGY STAR — Homes with certified windows can reduce HVAC runtime by up to 15%, directly extending equipment lifespan.</span>
         </div>
       </div>
 
       <div class="pain-card" data-d="2">
-        <span class="pain-cost" style="background:rgba(239,68,68,.1);color:#F87171">Year-round discomfort</span>
-        <span class="pain-icon">🌡️</span>
-        <span class="pain-eyebrow" style="color:#F87171">The Room That's Never Right</span>
+        <span class="pain-cost" style="background:rgba(185,28,28,.1);color:#B91C1C">Year-round discomfort</span>
+        <div class="pain-svg-wrap" style="background:rgba(185,28,28,.08)">
+          <svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="16" y="4" width="6" height="20" rx="3" fill="#B91C1C" opacity=".15" stroke="#B91C1C" stroke-width="2"/>
+            <circle cx="19" cy="28" r="6" fill="#B91C1C" opacity=".2" stroke="#B91C1C" stroke-width="2"/>
+            <rect x="18" y="10" width="2" height="12" rx="1" fill="#B91C1C"/>
+            <circle cx="19" cy="28" r="3" fill="#B91C1C"/>
+            <line x1="23" y1="8" x2="27" y2="8" stroke="#B91C1C" stroke-width="1.5" stroke-linecap="round" opacity=".6"/>
+            <line x1="23" y1="12" x2="26" y2="12" stroke="#B91C1C" stroke-width="1.5" stroke-linecap="round" opacity=".4"/>
+            <line x1="23" y1="16" x2="27" y2="16" stroke="#B91C1C" stroke-width="1.5" stroke-linecap="round" opacity=".6"/>
+          </svg>
+        </div>
+        <span class="pain-eyebrow" style="color:#B91C1C">The Room That's Never Right</span>
         <h3 class="pain-title">Hot Spots, Cold Drafts, Miserable Rooms</h3>
-        <p class="pain-body">That bedroom that's always 10 degrees too hot? The living room draft you feel in December? These aren't quirks of your floor plan — they're symptoms of windows that have failed. Modern triple-pane Low-E glass with thermal breaks eliminates these hot spots entirely, creating a consistent temperature throughout your home.</p>
-        <div class="pain-stat-bar" style="background:rgba(239,68,68,.07);border:1px solid rgba(239,68,68,.18)">
-          <span style="color:#F87171">📊 Source: Lawrence Berkeley National Laboratory — Window U-factor improvements directly reduce indoor surface temperature variation by up to 8°F.</span>
+        <p class="pain-body">That bedroom that's always 10° too hot? That's not your floor plan — that's your windows failing. Modern Low-E glass eliminates hot spots entirely.</p>
+        <div class="pain-stat-bar" style="background:rgba(185,28,28,.07);border:1px solid rgba(185,28,28,.2)">
+          <span style="color:#B91C1C">📊 Source: Lawrence Berkeley National Laboratory — Window U-factor improvements directly reduce indoor surface temperature variation by up to 8°F.</span>
         </div>
       </div>
 
       <div class="pain-card" data-d="3">
-        <span class="pain-cost" style="background:rgba(139,92,246,.1);color:#A78BFA">Disrupted sleep &amp; stress</span>
-        <span class="pain-icon">🔊</span>
-        <span class="pain-eyebrow" style="color:#A78BFA">Noise No One Should Live With</span>
+        <span class="pain-cost" style="background:rgba(109,40,217,.1);color:#6D28D9">Disrupted sleep &amp; stress</span>
+        <div class="pain-svg-wrap" style="background:rgba(109,40,217,.08)">
+          <svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="14" width="8" height="10" rx="2" fill="#6D28D9" opacity=".2" stroke="#6D28D9" stroke-width="2"/>
+            <path d="M12 12l5-5v24l-5-5" stroke="#6D28D9" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M20 14c2 1.5 2 8.5 0 10" stroke="#6D28D9" stroke-width="2" stroke-linecap="round" opacity=".7"/>
+            <path d="M24 11c3 2.5 3 13.5 0 16" stroke="#6D28D9" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+            <path d="M28 8c4 3.5 4 18.5 0 22" stroke="#6D28D9" stroke-width="1.5" stroke-linecap="round" opacity=".3"/>
+          </svg>
+        </div>
+        <span class="pain-eyebrow" style="color:#6D28D9">Noise No One Should Live With</span>
         <h3 class="pain-title">Traffic, Barking Dogs &amp; Sleepless Nights</h3>
-        <p class="pain-body">Aluminum-framed single or older double-pane windows transmit sound almost freely. Traffic noise, neighbors, early morning commotion — it bleeds into your sleep, your children's nap times, and your pets' anxiety levels. Modern laminated or triple-pane glass reduces exterior noise by 30–50%, a difference you notice on the very first night.</p>
-        <div class="pain-stat-bar" style="background:rgba(139,92,246,.07);border:1px solid rgba(139,92,246,.18)">
-          <span style="color:#A78BFA">📊 Source: WHO Environmental Noise Guidelines — Chronic exposure to 55+ dB (typical near roads) is linked to sleep disruption, elevated cortisol, and cardiovascular risk.</span>
+        <p class="pain-body">Old windows let traffic, neighbors, and early morning noise bleed straight through. Modern glass cuts that by 30–50% — noticeable the very first night.</p>
+        <div class="pain-stat-bar" style="background:rgba(109,40,217,.07);border:1px solid rgba(109,40,217,.2)">
+          <span style="color:#6D28D9">📊 Source: WHO Environmental Noise Guidelines — Chronic exposure to 55+ dB (typical near roads) is linked to sleep disruption, elevated cortisol, and cardiovascular risk.</span>
         </div>
       </div>
 
       <div class="pain-card" data-d="4">
-        <span class="pain-cost" style="background:rgba(245,158,11,.1);color:#FCD34D">$10K–$30K in damaged belongings</span>
-        <span class="pain-icon">☀️</span>
-        <span class="pain-eyebrow" style="color:#FCD34D">Invisible but Permanent</span>
+        <span class="pain-cost" style="background:rgba(180,83,9,.1);color:#B45309">$10K–$30K in damaged belongings</span>
+        <div class="pain-svg-wrap" style="background:rgba(180,83,9,.08)">
+          <svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="19" cy="13" r="6" fill="#B45309" opacity=".2" stroke="#B45309" stroke-width="2"/>
+            <line x1="19" y1="3" x2="19" y2="5" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+            <line x1="29" y1="7" x2="27.6" y2="8.4" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+            <line x1="33" y1="13" x2="31" y2="13" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+            <line x1="9" y1="7" x2="10.4" y2="8.4" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+            <line x1="5" y1="13" x2="7" y2="13" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+            <path d="M12 21l2-2 3 2 3-2 3 2 3-2 2 2" stroke="#B45309" stroke-width="1.5" stroke-linecap="round" opacity=".5"/>
+            <rect x="7" y="26" width="24" height="6" rx="2" fill="#B45309" opacity=".1" stroke="#B45309" stroke-width="1.5"/>
+            <path d="M11 29h16" stroke="#B45309" stroke-width="1.5" stroke-linecap="round" opacity=".5"/>
+          </svg>
+        </div>
+        <span class="pain-eyebrow" style="color:#B45309">Invisible but Permanent</span>
         <h3 class="pain-title">UV Fading Your Floors, Furniture &amp; Art</h3>
-        <p class="pain-body">Old windows transmit ultraviolet radiation directly into your home — bleaching hardwood floors, fading fabric furniture, degrading window treatments, and damaging photographs and artwork. This destruction is permanent and cumulative. Modern Low-E coatings block over 95% of UV rays before they enter your home.</p>
-        <div class="pain-stat-bar" style="background:rgba(245,158,11,.07);border:1px solid rgba(245,158,11,.18)">
-          <span style="color:#FCD34D">📊 Source: Skin Cancer Foundation / NFRC — UV-blocking Low-E glass is documented to preserve interior furnishings and reduce UV exposure equivalent to applying SPF 285 sunscreen to your walls.</span>
+        <p class="pain-body">UV radiation through old windows permanently bleaches floors, fades furniture, and destroys window treatments. Modern Low-E glass blocks over 95% before it enters your home.</p>
+        <div class="pain-stat-bar" style="background:rgba(180,83,9,.07);border:1px solid rgba(180,83,9,.2)">
+          <span style="color:#B45309">📊 Source: Skin Cancer Foundation / NFRC — UV-blocking Low-E glass is documented to preserve interior furnishings and reduce UV exposure equivalent to applying SPF 285 sunscreen to your walls.</span>
         </div>
       </div>
 
       <div class="pain-card" data-d="5">
-        <span class="pain-cost" style="background:rgba(16,185,129,.1);color:#6EE7B7">$2K–$6K in mold remediation</span>
-        <span class="pain-icon">💧</span>
-        <span class="pain-eyebrow" style="color:#6EE7B7">The Damage Behind the Walls</span>
+        <span class="pain-cost" style="background:rgba(4,120,87,.1);color:#047857">$2K–$6K in mold remediation</span>
+        <div class="pain-svg-wrap" style="background:rgba(4,120,87,.08)">
+          <svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="5" width="26" height="22" rx="3" fill="#047857" opacity=".08" stroke="#047857" stroke-width="2"/>
+            <line x1="19" y1="5" x2="19" y2="27" stroke="#047857" stroke-width="1.5" opacity=".3"/>
+            <line x1="6" y1="16" x2="32" y2="16" stroke="#047857" stroke-width="1.5" opacity=".3"/>
+            <path d="M12 10c0 3-3 5-3 7a3 3 0 006 0c0-2-3-4-3-7z" fill="#047857" opacity=".3" stroke="#047857" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M24 20c0 2-2 3.5-2 5a2 2 0 004 0c0-1.5-2-3-2-5z" fill="#047857" opacity=".5" stroke="#047857" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M6 27c6 4 20 4 26 0" stroke="#047857" stroke-width="2" stroke-linecap="round" opacity=".4"/>
+          </svg>
+        </div>
+        <span class="pain-eyebrow" style="color:#047857">The Damage Behind the Walls</span>
         <h3 class="pain-title">Condensation, Mold &amp; Hidden Wood Rot</h3>
-        <p class="pain-body">When warm interior air contacts a cold window surface, moisture condenses and works into your wall cavities, framing, and sills. Over months and years, this creates conditions for mold growth and structural rot. By the time you notice discoloration or odor, the damage is often extensive — and rarely covered by homeowner insurance.</p>
-        <div class="pain-stat-bar" style="background:rgba(16,185,129,.07);border:1px solid rgba(16,185,129,.18)">
-          <span style="color:#6EE7B7">📊 Source: EPA Indoor Air Quality — Mold and moisture problems in homes are linked to the leading sources of respiratory illness and structural damage. EPA recommends controlling condensation at windows as a primary prevention measure.</span>
+        <p class="pain-body">Cold window surfaces pull moisture into your walls. By the time you see mold or smell rot, the damage is extensive — and rarely covered by insurance.</p>
+        <div class="pain-stat-bar" style="background:rgba(4,120,87,.07);border:1px solid rgba(4,120,87,.2)">
+          <span style="color:#047857">📊 Source: EPA Indoor Air Quality — Mold and moisture problems in homes are linked to the leading sources of respiratory illness and structural damage. EPA recommends controlling condensation at windows as a primary prevention measure.</span>
         </div>
       </div>
 
       <div class="pain-card" data-d="6" style="grid-column: 1 / -1; max-width: 380px; margin: 0 auto; justify-self: center;">
-        <span class="pain-cost" style="background:rgba(236,72,153,.1);color:#F9A8D4">Security vulnerability</span>
-        <span class="pain-icon">🔒</span>
-        <span class="pain-eyebrow" style="color:#F9A8D4">A Risk Most Homeowners Overlook</span>
+        <span class="pain-cost" style="background:rgba(157,23,77,.1);color:#9D174D">Security vulnerability</span>
+        <div class="pain-svg-wrap" style="background:rgba(157,23,77,.08)">
+          <svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 18v-6a9 9 0 0118 0v6" stroke="#9D174D" stroke-width="2" stroke-linecap="round"/>
+            <rect x="6" y="18" width="26" height="16" rx="3" fill="#9D174D" opacity=".12" stroke="#9D174D" stroke-width="2"/>
+            <circle cx="19" cy="26" r="3" fill="#9D174D" opacity=".4" stroke="#9D174D" stroke-width="1.5"/>
+            <line x1="19" y1="29" x2="19" y2="31" stroke="#9D174D" stroke-width="2" stroke-linecap="round"/>
+            <path d="M25 12l3-3M25 9l3 3" stroke="#9D174D" stroke-width="1.5" stroke-linecap="round" opacity=".6"/>
+          </svg>
+        </div>
+        <span class="pain-eyebrow" style="color:#9D174D">A Risk Most Homeowners Overlook</span>
         <h3 class="pain-title">Worn Latches &amp; Compromised Security</h3>
-        <p class="pain-body">Older windows with worn hardware, warped frames, and failing latches don't just leak energy — they're points of vulnerability. Modern replacement windows include multi-point locking systems, reinforced vinyl frames, and optional impact-resistant glass, providing measurably better security than builder-grade windows from 15–30 years ago.</p>
-        <div class="pain-stat-bar" style="background:rgba(236,72,153,.07);border:1px solid rgba(236,72,153,.18)">
-          <span style="color:#F9A8D4">📊 Source: FBI Crime Data — Ground-floor windows are among the top 3 entry points in residential break-ins. Hardware integrity is a documented deterrent factor in residential security assessments.</span>
+        <p class="pain-body">Worn latches and warped frames are entry points, not just annoyances. Modern windows include multi-point locking systems that aging builder-grade hardware simply can't match.</p>
+        <div class="pain-stat-bar" style="background:rgba(157,23,77,.07);border:1px solid rgba(157,23,77,.2)">
+          <span style="color:#9D174D">📊 Source: FBI Crime Data — Ground-floor windows are among the top 3 entry points in residential break-ins. Hardware integrity is a documented deterrent factor in residential security assessments.</span>
         </div>
       </div>
 
@@ -666,7 +756,7 @@ input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.2)}
         <div class="ba-photo">
           <span class="ba-photo-icon">📷</span>
           <strong>Add your before photo here</strong>
-          <span>Old aluminum frame, failed seals,<br>faded caulk, visible gaps</span>
+          <span>Old builder-grade frame, failed seals,<br>faded caulk, visible gaps</span>
         </div>
         <ul class="ba-list">
           <li><span>🔥</span>Aluminum frame conducts heat directly in</li>
@@ -717,17 +807,17 @@ input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.2)}
       <div class="results">
         <div class="res-item">
           <span class="res-lbl">Monthly Savings</span>
-          <span class="res-num sec" id="r-mo">$84–$126</span>
-          <span class="res-sub">estimated range</span>
+          <span class="res-num sec" id="r-mo">$147</span>
+          <span class="res-sub">per month</span>
         </div>
         <div class="res-item center-res">
           <span class="res-lbl">Annual Savings</span>
-          <span class="res-num main" id="r-yr">$1,008–$1,512</span>
+          <span class="res-num main" id="r-yr">$1,764</span>
           <span class="res-sub">per year</span>
         </div>
         <div class="res-item">
           <span class="res-lbl">10-Year Total</span>
-          <span class="res-num sec" id="r-10">$10,080–$15,120</span>
+          <span class="res-num sec" id="r-10">$17,640</span>
           <span class="res-sub">retained in your home</span>
         </div>
       </div>
@@ -743,19 +833,25 @@ input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.2)}
       <!-- FORM — commitment follows investment (Cialdini, Commitment & Consistency principle) -->
       <div id="form-wrap">
         <p class="form-label-txt">
-          Want a <strong>precise quote for your specific home?</strong><br>
-          schedule a free home energy assessment and see how much you could save.
+          <strong>Ready to stop losing thousands of dollars per year on your old windows?</strong><br>
+          Schedule a no-pressure design consultation.
         </p>
         <div class="frow">
-          <input class="finput" type="text" id="f-name" placeholder="Your name" autocomplete="name">
-          <input class="finput" type="tel" id="f-phone" placeholder="Phone number" autocomplete="tel">
+          <input class="finput" type="text" id="f-fname" placeholder="First name *" autocomplete="given-name">
+          <input class="finput" type="text" id="f-lname" placeholder="Last name *" autocomplete="family-name">
         </div>
         <div class="frow">
-          <input class="finput" type="email" id="f-email" placeholder="Email address (optional)" autocomplete="email">
+          <input class="finput" type="tel" id="f-phone" placeholder="Phone number *" autocomplete="tel">
+          <input class="finput" type="email" id="f-email" placeholder="Email address *" autocomplete="email">
         </div>
-        <!-- Microcopy: action verb + specific outcome reduces friction (Fogg BJ Model) -->
+        <div class="frow">
+          <input class="finput" type="text" id="f-address" placeholder="Home address (optional)" autocomplete="street-address">
+        </div>
+        <div class="frow">
+          <input class="finput" type="number" id="f-windows" placeholder="Number of windows / doors (optional)" min="1" max="100">
+        </div>
         <button class="fsubmit" onclick="doSubmit()">
-          Book My Free In-Home Energy Assessment →
+          Book My Free Design Consultation →
         </button>
         <p class="form-trust">🔒 &nbsp;Your information is never shared or sold &nbsp;·&nbsp; One of our product specialists will reach out as soon as we are available.</p>
       </div>
@@ -780,32 +876,85 @@ input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.2)}
     </div>
     <div class="why-grid">
       <div class="why-card fade-up" data-d="0">
-        <span class="why-icon">💰</span>
+        <div class="why-svg-wrap">
+          <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="5" y="3" width="16" height="22" rx="2" fill="#3A4A2F" opacity=".1" stroke="#5C7347" stroke-width="1.8"/>
+            <line x1="9" y1="9" x2="17" y2="9" stroke="#5C7347" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="9" y1="13" x2="17" y2="13" stroke="#5C7347" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="9" y1="17" x2="14" y2="17" stroke="#5C7347" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="22" cy="22" r="6" fill="#C8832A" opacity=".15" stroke="#C8832A" stroke-width="1.5"/>
+            <path d="M22 19v3.5l2 1.5" stroke="#C8832A" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <div class="why-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </div>
         <div class="why-title">Transparent Pricing From the Start</div>
         <p class="why-body">You'll see the full price before we leave your home. Itemized. No "let me call my manager." No callbacks. No manufactured urgency. Just honest numbers on paper.</p>
       </div>
       <div class="why-card fade-up" data-d="1">
-        <span class="why-icon">🤝</span>
+        <div class="why-svg-wrap">
+          <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 18l4-4 4 2 5-5 4 2 7-6" stroke="#5C7347" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity=".4"/>
+            <path d="M4 22c1.5-1 3.5-1 5 0l2-2c1.5-1.5 3.5-1.5 5 0l1-1c1.5-1.5 3.5-1.5 5 0" stroke="#5C7347" stroke-width="1.8" stroke-linecap="round"/>
+            <circle cx="15" cy="12" r="4" fill="#5C7347" opacity=".12" stroke="#5C7347" stroke-width="1.8"/>
+            <path d="M13 12l1.5 1.5L17 10" stroke="#5C7347" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="why-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </div>
         <div class="why-title">Zero-Pressure Assessment</div>
         <p class="why-body">We don't do 2-hour in-home sales presentations. We assess, we measure, we show you the data — and you decide if and when it makes sense. On your timeline, not ours.</p>
       </div>
       <div class="why-card fade-up" data-d="2">
-        <span class="why-icon">🏆</span>
+        <div class="why-svg-wrap">
+          <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="18" width="7" height="9" rx="1.5" fill="#5C7347" opacity=".15" stroke="#5C7347" stroke-width="1.8"/>
+            <rect x="12" y="12" width="7" height="15" rx="1.5" fill="#5C7347" opacity=".15" stroke="#5C7347" stroke-width="1.8"/>
+            <rect x="21" y="6" width="7" height="21" rx="1.5" fill="#C8832A" opacity=".12" stroke="#C8832A" stroke-width="1.8"/>
+            <path d="M6 14l4-5 5 3 5-8 5-2" stroke="#C8832A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="24" cy="4" r="2.5" fill="#C8832A" opacity=".3" stroke="#C8832A" stroke-width="1.2"/>
+            <path d="M23 4h2M24 3v2" stroke="#C8832A" stroke-width="1" stroke-linecap="round"/>
+          </svg>
+          <div class="why-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </div>
         <div class="why-title">Same Alside Product, Lower Price</div>
         <p class="why-body">DaBella charges $22,000–$38,000 for 10 Alside windows. We charge $11,000–$20,000. Same product. Same lifetime warranty. The difference is overhead, commission, and sales tactics you're paying for with them — not us.</p>
       </div>
       <div class="why-card fade-up" data-d="3">
-        <span class="why-icon">📍</span>
-        <div class="why-title">Locally Owned & Accountable</div>
+        <div class="why-svg-wrap">
+          <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 3L3 12h3v14h7v-8h4v8h7V12h3L15 3z" fill="#5C7347" opacity=".12" stroke="#5C7347" stroke-width="1.8" stroke-linejoin="round"/>
+            <circle cx="23" cy="8" r="4" fill="#C8832A" opacity=".15" stroke="#C8832A" stroke-width="1.5"/>
+            <path d="M23 5c1.7 0 3 1.3 3 3 0 2-3 5-3 5s-3-3-3-5c0-1.7 1.3-3 3-3z" fill="#C8832A" opacity=".3"/>
+            <circle cx="23" cy="8" r="1.2" fill="#C8832A"/>
+          </svg>
+          <div class="why-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </div>
+        <div class="why-title">Locally Owned &amp; Accountable</div>
         <p class="why-body">We're a Phoenix-area family business. When you call, you reach one of our product specialists — not a national call center. We live in the communities we serve, and our reputation here matters more than any ad budget.</p>
       </div>
       <div class="why-card fade-up" data-d="4">
-        <span class="why-icon">⚡</span>
+        <div class="why-svg-wrap">
+          <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="7" width="20" height="19" rx="2.5" fill="#5C7347" opacity=".1" stroke="#5C7347" stroke-width="1.8"/>
+            <line x1="3" y1="13" x2="23" y2="13" stroke="#5C7347" stroke-width="1.5" opacity=".4"/>
+            <line x1="8" y1="4" x2="8" y2="10" stroke="#5C7347" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="18" y1="4" x2="18" y2="10" stroke="#5C7347" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M8 18l3 3 5-5" stroke="#5C7347" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="23" cy="22" r="5" fill="#C8832A" opacity=".15" stroke="#C8832A" stroke-width="1.5"/>
+            <path d="M23 19.5V22l1.5 1.5" stroke="#C8832A" stroke-width="1.3" stroke-linecap="round"/>
+          </svg>
+          <div class="why-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </div>
         <div class="why-title">Installed in One Day</div>
         <p class="why-body">Our Alside ISS-certified installation team handles measurement, manufacturing, and installation. Most full-home jobs complete in a single day. Crew arrives in the morning. You're done before dinner.</p>
       </div>
       <div class="why-card fade-up" data-d="5">
-        <span class="why-icon">🛡️</span>
+        <div class="why-svg-wrap">
+          <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 3l10 4v8c0 6-4.5 10.5-10 12C9.5 25.5 5 21 5 15V7l10-4z" fill="#5C7347" opacity=".12" stroke="#5C7347" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M10 15l3.5 3.5L20 11" stroke="#5C7347" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="why-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </div>
         <div class="why-title">Manufacturer Lifetime Warranty</div>
         <p class="why-body">Every Alside window comes with a manufacturer's limited lifetime warranty. Every installation comes with our own labor warranty. If something is ever wrong, we make it right — period.</p>
       </div>
@@ -923,30 +1072,20 @@ input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.2)}
 
 <!-- ══ JAVASCRIPT ══ -->
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-// ── CALCULATOR — range model: 20%–30% of monthly bill (DOE basis) ──
-function animRange(id, lo, hi, prefix) {
-  const el = document.getElementById(id);
-  if (!el) return;
-  el.textContent = prefix + lo.toLocaleString() + '–' + prefix + hi.toLocaleString();
-}
-
+// ── CALCULATOR — flat 35% of monthly bill (DOE hot-arid basis) ──
 function runCalc() {
   const bill = +document.getElementById('s-bill').value;
   document.getElementById('v-bill').textContent = '$' + bill + ' / mo';
 
-  // DOE hot-arid climate zone: windows account for 20–30% of HVAC load
-  const moLo = Math.round(bill * 0.20);
-  const moHi = Math.round(bill * 0.30);
-  const yrLo = moLo * 12;
-  const yrHi = moHi * 12;
-  const tenLo = yrLo * 10;
-  const tenHi = yrHi * 10;
-  const ac = Math.round(4200 + bill * 1.8);
+  const mo  = Math.round(bill * 0.35);
+  const yr  = mo * 12;
+  const ten = yr * 10;
+  const ac  = Math.round(4200 + bill * 1.8);
 
-  animRange('r-mo',  moLo,  moHi,  '$');
-  animRange('r-yr',  yrLo,  yrHi,  '$');
-  animRange('r-10',  tenLo, tenHi, '$');
-  document.getElementById('r-ac').textContent = '$' + ac.toLocaleString();
+  document.getElementById('r-mo').textContent  = '$' + mo.toLocaleString();
+  document.getElementById('r-yr').textContent  = '$' + yr.toLocaleString();
+  document.getElementById('r-10').textContent  = '$' + ten.toLocaleString();
+  document.getElementById('r-ac').textContent  = '$' + ac.toLocaleString();
 }
 
 document.getElementById('s-bill').addEventListener('input', runCalc);
@@ -954,22 +1093,33 @@ runCalc();
 
 // ── FORM SUBMIT ──
 function doSubmit() {
-  const name  = document.getElementById('f-name').value.trim();
-  const phone = document.getElementById('f-phone').value.trim();
-  const email = document.getElementById('f-email').value.trim();
-  if (!name || !phone) {
-    document.getElementById('f-name').style.borderColor = name  ? '' : 'rgba(239,68,68,.6)';
-    document.getElementById('f-phone').style.borderColor = phone ? '' : 'rgba(239,68,68,.6)';
-    return;
-  }
+  const fname   = document.getElementById('f-fname').value.trim();
+  const lname   = document.getElementById('f-lname').value.trim();
+  const phone   = document.getElementById('f-phone').value.trim();
+  const email   = document.getElementById('f-email').value.trim();
+  const address = document.getElementById('f-address').value.trim();
+  const windows = document.getElementById('f-windows').value.trim();
+
+  const required = [
+    { id: 'f-fname', val: fname },
+    { id: 'f-lname', val: lname },
+    { id: 'f-phone', val: phone },
+    { id: 'f-email', val: email },
+  ];
+  let valid = true;
+  required.forEach(f => {
+    const el = document.getElementById(f.id);
+    if (!f.val) { el.style.borderColor = 'rgba(239,68,68,.7)'; valid = false; }
+    else el.style.borderColor = '';
+  });
+  if (!valid) return;
+
   // ── HOOK YOUR FORM HERE ──
   // Option A — GoHighLevel webhook:
-  // fetch('https://YOUR_GHL_WEBHOOK', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({name,phone,email})});
+  // fetch('https://YOUR_GHL_WEBHOOK', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({fname,lname,phone,email,address,windows})});
   // Option B — redirect to GoHighLevel booking page:
   // window.location.href = 'https://your-ghl-booking-link';
-  // Option C — mailto fallback (temporary):
-  // window.location.href = `mailto:service@radiantsolutionsaz.com?subject=Assessment Request&body=Name: ${name}%0APhone: ${phone}%0AEmail: ${email}`;
-  console.log('Lead:', {name, phone, email});
+  console.log('Lead:', {fname, lname, phone, email, address, windows});
   document.getElementById('form-wrap').style.display = 'none';
   document.getElementById('f-success').style.display = 'block';
   document.getElementById('f-success').scrollIntoView({behavior:'smooth', block:'center'});
